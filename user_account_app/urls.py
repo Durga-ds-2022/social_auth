@@ -12,6 +12,3 @@ urlpatterns = [
     
 ]
     
-    
-    ### secret - 046555f075a58755a543ff4649f55405c434b5aa
-    ## key=  e58cb4553d1d3ad7b0d0

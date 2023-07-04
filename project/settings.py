@@ -47,14 +47,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
 
 
 # local app
 'user_account_app',
-'oauth_app'
 ]
 
 SITE_ID = 2
@@ -180,10 +179,6 @@ AUTHENTICATION_BACKENDS = [
 #         'AUTH_PARAMS': {'access_type': 'online'},
 #     }
 # }
-
-# SOCIAL_AUTH_GOOGLE_KEY = '289286010954-rou8oa9jqmt1ag561cfip174bemtcen9.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_SECRET = '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'
-# SOCIAL_AUTH_GOOGLE_SCOPE = ['email', ]  # 
 
 
 SOCIALACCOUNT_PROVIDER = {
