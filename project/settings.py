@@ -47,14 +47,13 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
     'allauth.socialaccount.providers.google',
 
 
 # local app
 'user_account_app',
-'oauth_app'
 ]
 
 SITE_ID = 2
@@ -169,29 +168,12 @@ AUTHENTICATION_BACKENDS = [
    
 ]
 
-#LOGIN_REDIRECT_URL :- destination of login page in your urls.py
-# LOGIN_REDIRECT_URL = 'account/'
-# # ACCOUNT_LOGOUT_REDIRECT :- where to redirect when user logout
-# ACCOUNT_LOGOUT_REDIRECT = 'account/'
-
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'SCOPE': ['profile', 'email'],
-#         'AUTH_PARAMS': {'access_type': 'online'},
-#     }
-# }
-
-# SOCIAL_AUTH_GOOGLE_KEY = '289286010954-rou8oa9jqmt1ag561cfip174bemtcen9.apps.googleusercontent.com'
-# SOCIAL_AUTH_GOOGLE_SECRET = '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'
-# SOCIAL_AUTH_GOOGLE_SCOPE = ['email', ]  # 
-
 
 SOCIALACCOUNT_PROVIDER = {
     'github': {
         'scope': ('user:email',)
     }
 }
-SOCIAL_AUTH_REDIRECT_IS_HTTPS = True
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -205,6 +187,11 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL= '/'
-LOGOUT_REDIRECT_URL= '/'
+LOGIN_REDIRECT_URL= 'home'
+LOGOUT_REDIRECT_URL= 'home'
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'http'
+
+
+
 
